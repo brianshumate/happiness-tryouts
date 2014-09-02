@@ -18,7 +18,7 @@ Haiku about love, loss, and lifetimes
 The universe has folded and returned me to a new cycle without first
 requiring that I be reborn a grasshopper, so there's that.
 
-(See them here](http://happiness-tryouts.brianshumate.com)
+[Happiness Tryouts](http://happiness-tryouts.brianshumate.com)
 
 —Brian Shumate <br>
 2014-05-08

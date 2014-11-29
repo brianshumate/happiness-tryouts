@@ -13,7 +13,7 @@
     ||||||||  \__|_|   \__, |\___/ \__,_|\__|___/
     ||||||||           |___/
 
-Haiku about love, loss, and lifetimes
+Haiku about love, loss, loneliness, and lifetimes
 
 The universe has folded and returned me to a new cycle without first
 requiring that I be reborn a grasshopper, so there's that.

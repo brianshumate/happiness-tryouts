@@ -12,28 +12,11 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-  <script>
-    window.onload = function() {
-      var imageEls = document.querySelectorAll(".figure img");
-      for (var i = 0; i < imageEls.length; i++) {
-        var imageEl = imageEls[i];
-        var parent = imageEl.parentNode;
-        var captionEl = parent.querySelector(".caption");
-        if (captionEl) {
-          function transferWidth() {
-            captionEl.style["max-width"] = imageEl.naturalWidth+"px";
-          }
-          if (imageEl.complete) {
-            transferWidth();
-          } else {
-            imageEl.onload = transferWidth;
-          }
-        }
-      };
-    };
-  </script>
-
   <link href="style.css" rel="stylesheet" />
+  
+  <script src="jquery-2.1.0.min.js"></script>
+  <script src="underscore.js"></script>
+  <script src="app.js"></script>
   
 
   <title>Happiness Tryouts</title>
@@ -42,34 +25,13 @@
 
 <div class="article">
 <div id="cover" class="content-node cover">
-
-
-  <div class="cover-image">
-    <img src="cover.jpg"/>
-  </div>
-
-
 <div class="content">
-
 <h1>Happiness Tryouts</h1>
-
-<div class="article-meta">
+<div class="authors">
   
-  
-    <div class="authors">
-      By
-
-      
-      <a href="#contributor_b9b1aea8fdd09f8115bbac2b4065c9fc" class="author">Brian Shumate</a>
-    </div>
+    <a href="#contributor_b9b1aea8fdd09f8115bbac2b4065c9fc" class="author">Brian Shumate</a>
   
 </div>
-
-
-  <div class="article-abstract">
-    Haiku about love, loss, loneliness, and lifetimes
-  </div>
-
 
  
 
@@ -153,6 +115,8 @@
       <div class="toc-entry level-2"><a href="#heading_82673c48e558289fb743af7c2a86b981">I am Dying</a></div>
     
       <div class="toc-entry level-2"><a href="#heading_eeb6acf72311ad013df4c8ff097b26d9">Snowstorm of Solitude</a></div>
+    
+      <div class="toc-entry level-2"><a href="#heading_b015367105fd491898c087663161b7a1">Navigation by Heart</a></div>
     
   </div>
 </div>
@@ -706,25 +670,28 @@ Blanketing an absent love
 Seems less beautiful</pre>
 </div>
 </div>
-<div id="text_ce49400cf596f6d8082469291d65eae4" class="content-node text">
+
+<div id="heading_b015367105fd491898c087663161b7a1" class="content-node heading level-2">
+  <div class="content">
+    <a href="#heading_b015367105fd491898c087663161b7a1" class="anchor">#</a>
+    <h2>Navigation by Heart</h2>
+  </div>
+</div>
+<div id="code_block_399debe36e54aa24933505b622861000" class="content-node code-block">
+<div class="content">
+<pre>You are my lighthouse 
+My river to the ocean
+You are my North Star</pre>
+</div>
+</div>
+<div id="text_4fbe1bfe96e287a2ebb6969755cf2233" class="content-node text">
 <div class="content">
   
 </div>
 </div>
 
-
-<div id="references" class="content-node references">
-  <div class="content">
-    
-
-    
-  </div>
-</div>
-
 <div id="publication_info" class="content-node publication-info">
   <div class="content">
-
-
 
     
     
@@ -744,10 +711,13 @@ By night: art, writing, www, and The Lake.</div>
 
     
 
+    
 
+    
 
+    
     <div class="copyright">
-      <!-- <div class="label">Copyright</div> -->
+      <div class="label">Copyright</div>
       
 
       
@@ -762,21 +732,20 @@ By night: art, writing, www, and The Lake.</div>
         See <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution License</a>.
         
       </div>
-
-
     </div>
-
-  </div>
-
-<div class="generator">
-  <div class="content">
-    This article was created with <a href="http://substance.io/composer">Substance</a>, an open self-publishing system.
+    
   </div>
 </div>
-
-</div>
 </div>
 
-
+<script>
+  
+    $(function() {
+      var articleEl = $('.article')[0];
+      var app = new Reader(articleEl);
+      app.start();
+    });
+  
+</script>
 </body>
 </html>

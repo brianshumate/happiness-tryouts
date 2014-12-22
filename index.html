@@ -12,11 +12,28 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+  <script>
+    window.onload = function() {
+      var imageEls = document.querySelectorAll(".figure img");
+      for (var i = 0; i < imageEls.length; i++) {
+        var imageEl = imageEls[i];
+        var parent = imageEl.parentNode;
+        var captionEl = parent.querySelector(".caption");
+        if (captionEl) {
+          function transferWidth() {
+            captionEl.style["max-width"] = imageEl.naturalWidth+"px";
+          }
+          if (imageEl.complete) {
+            transferWidth();
+          } else {
+            imageEl.onload = transferWidth;
+          }
+        }
+      };
+    };
+  </script>
+
   <link href="style.css" rel="stylesheet" />
-  
-  <script src="jquery-2.1.0.min.js"></script>
-  <script src="underscore.js"></script>
-  <script src="app.js"></script>
   
 
   <title>Happiness Tryouts</title>
@@ -25,101 +42,37 @@
 
 <div class="article">
 <div id="cover" class="content-node cover">
+
+
+  <div class="cover-image">
+    <img src="cover.jpg"/>
+  </div>
+
+
 <div class="content">
+
 <h1>Happiness Tryouts</h1>
-<div class="authors">
+
+<div class="article-meta">
   
-    <a href="#contributor_b9b1aea8fdd09f8115bbac2b4065c9fc" class="author">Brian Shumate</a>
+  
+    <div class="authors">
+      By
+
+      
+      <a href="#contributor_b9b1aea8fdd09f8115bbac2b4065c9fc" class="author">J. Brian Shumate</a>
+    </div>
   
 </div>
+
+
+  <div class="article-abstract">
+    Haiku about love, loss, loneliness, and lifetimes
+  </div>
+
 
  
 
-
-<div class="toc">
-  <div class="toc-title">Contents </div>
-  <div class="toc-entries">
-    
-      <div class="toc-entry level-2"><a href="#heading_3eb57c2a441b34bfd24f91c2a120447c">A Cosmos by the Lake</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_eaa2b2d275c9de862cc675277992773c">Fair-weather Friend</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_2c0922a9f760cb51f3a004838c2af53c">Another Vacation</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_3d95f8cd2136ec6bf4e91355ffdd6f2c">No Warmth</a></div>
-    
-      <div class="toc-entry level-2"><a href="#9c2307d19d05b07a440f776d73f41068">Surf Line</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_a4dab1df421d292ef31a6dcc93f0a87e">Cute Scorpion</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_95f4bad4dec3897a694c52091bdd41de">Unstarcrossed</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_7215ec89a8dbf8d0f1668258b4c3a613">Love of the Ocean</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_370531f3988eec0b19cf20147d7f8351">Life on the Red Planet</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_c5e17e1ce6f442f0b1dbf52eb7012ae8">Keep It Simple Sweetheart</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_3b2241148d5390a875647739d7676632">Lovesick</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_26a9789a8a44a50e9e78f2b59d489f0d">The Bridge</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_22c466317cc4a1dbfbc9b01dcf5baf89">Hotline</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_91873a5257ae28d312627abc06010ccf">Pillow Talk</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_7ade6ed5167a2277b82bfa269b1c6902">River Physics</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_55a9b5ceb90fd2de031352def0f49bfb">Fourth of July</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_88eadedbb19a5a33f2f3b0326a8ebb60">Your Spot</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_dda5f270d30602081a34abf78a82aa16">Guided by Light</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_0ab338315bad4394892bb44284a25785">One Path</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_3906f73292d7b1307f36072582def1bc">Leftovers</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_e33df0172642058686eb79aae164fde0">Work in Progress</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_f5eb8ac45f58ed492154f3dc8c6b61be">Zero Doubt</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_e42f3918c1c97f37aee563f117e13dc9">Unwilling Culicidae</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_9ac576262171d8470b6e4707e503d544">On Deck</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_4481b70ea1956b0c52fb2e3c337aeccd">How I Burn for You</a></div>
-    
-      <div class="toc-entry level-2"><a href="#a87da662f301084a97eff766097287ce">Meandering Morning Mist</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_821bbb884b1246e6988aff5f170721e4">Too Hot to Handle</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_d535cca0b02c9aea5f318238b554321f">Woman in the Moon</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_70b8d3956daa89d8446ed272c7c0d596">Selfishness in the Stars</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_db122b79b66d54bdab34bb80cfc4545e">Let Lightning Live Long</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_89d4ca1add906f6ba9128cc74f3b456d">Synchronize Watches</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_b04555626f895ab42f31336c7260c9b7">Young Again</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_81887030178a9067c10198ce0fb5387a">Condensation</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_92e46526fba92690b3f8149e7eff3a35">Life Does Revolve</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_9b83ccd60cedb3e3cabb1efebe2b3ba7">Sometimes Please Stop</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_a1aa8cca346cc6e88828fe025328593b">Aquatic Constellations</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_82673c48e558289fb743af7c2a86b981">I am Dying</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_eeb6acf72311ad013df4c8ff097b26d9">Snowstorm of Solitude</a></div>
-    
-      <div class="toc-entry level-2"><a href="#heading_b015367105fd491898c087663161b7a1">Navigation by Heart</a></div>
-    
-  </div>
-</div>
 
 
 </div>
@@ -690,8 +643,19 @@ You are my North Star</pre>
 </div>
 </div>
 
+
+<div id="references" class="content-node references">
+  <div class="content">
+    
+
+    
+  </div>
+</div>
+
 <div id="publication_info" class="content-node publication-info">
   <div class="content">
+
+
 
     
     
@@ -699,7 +663,7 @@ You are my North Star</pre>
       <div class="authors">
         
           <div class="author" id="contributor_b9b1aea8fdd09f8115bbac2b4065c9fc">
-            <div class="author-name">Brian Shumate</div>
+            <div class="author-name">J. Brian Shumate</div>
             <img class="author-image" src="contributor_b9b1aea8fdd09f8115bbac2b4065c9fc.jpg"/>
             <div class="author-description">By day: distributed systems challenges with databases and stuff. 
 
@@ -711,19 +675,16 @@ By night: art, writing, www, and The Lake.</div>
 
     
 
-    
 
-    
 
-    
     <div class="copyright">
-      <div class="label">Copyright</div>
+      <!-- <div class="label">Copyright</div> -->
       
 
       
       <div class="copyright-statement">
         Copyright &copy; 2014
-        Brian Shumate
+        J. Brian Shumate
       </div>
       
       <div class="license">
@@ -732,20 +693,21 @@ By night: art, writing, www, and The Lake.</div>
         See <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution License</a>.
         
       </div>
+
+
     </div>
-    
+
   </div>
+
+<div class="generator">
+  <div class="content">
+    This article was created with <a href="http://substance.io/composer">Substance</a>, an open self-publishing system.
+  </div>
+</div>
+
 </div>
 </div>
 
-<script>
-  
-    $(function() {
-      var articleEl = $('.article')[0];
-      var app = new Reader(articleEl);
-      app.start();
-    });
-  
-</script>
+
 </body>
 </html>
